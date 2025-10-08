@@ -50,7 +50,7 @@ Resources:
                 Action:
                   - ssm:GetParameter
                 Resource:
-                  - !Sub arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/reinforce25/grc352/*
+                  - !Sub arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/workshop/*
         - PolicyName: TFStateBucket
           PolicyDocument:
             Version: 2012-10-17
@@ -62,8 +62,8 @@ Resources:
                   - s3:DeleteObject
                   - s3:ListBucket
                 Resource:
-                  - !Sub arn:${AWS::Partition}:s3:::${AWS::AccountId}-grc352-tf-state
-                  - !Sub arn:${AWS::Partition}:s3:::${AWS::AccountId}-grc352-tf-state/*
+                  - !Sub arn:${AWS::Partition}:s3:::${AWS::AccountId}-workshop-tf-state
+                  - !Sub arn:${AWS::Partition}:s3:::${AWS::AccountId}-workshop-tf-state/*
 
   GithubOidc:
     Type: AWS::IAM::OIDCProvider
