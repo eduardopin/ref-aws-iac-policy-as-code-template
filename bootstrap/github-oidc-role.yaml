@@ -70,11 +70,11 @@ Resources:
     Condition: CreateOIDCProvider
     Properties:
       Url: https://token.actions.githubusercontent.com
-      ClientIdList: 
+      ClientIdList:
         - sts.amazonaws.com
       ThumbprintList:
         - ffffffffffffffffffffffffffffffffffffffff
 
 Outputs:
   Role:
-    Value: !GetAtt Role.Arn 
+    Value: !GetAtt Role.Arn
