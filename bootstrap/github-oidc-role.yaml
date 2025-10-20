@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: |
-  Creates an IAM role that can be assumed by GitHub Actions using OpenID Connect.
+  Creates an IAM role that can be assumed by GitHub Actions using OpenID Connect and configures a strict policies for SSM and S3 access.
 Parameters:
   GitHubOrg:
     Description: Name of GitHub organization/user (case sensitive)
